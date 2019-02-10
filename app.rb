@@ -72,7 +72,7 @@ class HangpersonApp < Sinatra::Base
       end
       erb :show
     else
-      status 404
+      status 403
     end
   end
 
@@ -80,7 +80,7 @@ class HangpersonApp < Sinatra::Base
     if @game.word != '' && @game.word != nil && @game.check_win_or_lose == :win
       erb :win
     else
-      status 404
+      status 403
     end
   end
 
@@ -88,7 +88,7 @@ class HangpersonApp < Sinatra::Base
     if @game.word != '' && @game.word != nil && @game.check_win_or_lose == :lose
       erb :lose
     else
-      status 404
+      status 403
     end
   end
 
